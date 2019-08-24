@@ -1,0 +1,25 @@
+{
+  "name": "talktomeinshorts",
+  "version": "1.0.0",
+  "description": "An application that reads to you the top shorts from Inshorts ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranjaldatta/TalkToMeInshorts.git"
+  },
+  "author": "Pranjal Datta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranjaldatta/TalkToMeInshorts/issues"
+  },
+  "homepage": "https://github.com/pranjaldatta/TalkToMeInshorts#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
