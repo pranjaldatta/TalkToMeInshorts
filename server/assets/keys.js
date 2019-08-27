@@ -1,6 +1,6 @@
 var awsPollyAuth = {
-    accessKey : "AKIA23GUCI43SI77E6H6",
-    secretAccessKey : "FFgBHyRVJ7h8qR8ck7qtxoxR4l18Lj9GrNi+nvHG",
+    accessKey : "", //put your own acceessKey here
+    secretAccessKey : "", //put your own secretAccessKey here
 }
 
 module.exports.awsPollyAuth = awsPollyAuth
