@@ -15,6 +15,7 @@ var rp = require('request-promise');
  * @property {Map} _topics
  * @property {String} _mainUrl
  * @property {Function} lookIn
+ * @property {Number} numShorts
  */
 
 var _baseUrl = "https://www.inshorts.com/en/read"
@@ -33,14 +34,16 @@ var _topics = {
     "automobile" : "automobile"
 }
 var _mainUrl = ""
+var _numShorts = 0
 
-function lookIn(val){
+function lookIn(str , num){
 
     try{
-        _mainUrl = _baseUrl + "/" + _topics[val]
+        _mainUrl = _baseUrl + "/" + _topics[str]
+        _numShorts = num
     }
     catch(err){
-        console.log("Error at creating mainURl: ", err)
+        console.log("Error at lookIn: ", err)
     }
     
 }
@@ -56,7 +59,7 @@ function lookIn(val){
 
 
 
-async function getShorts(numShorts){
+async function getShorts(){
     var count
     var shortsDict = []
     var short = {
@@ -78,7 +81,13 @@ async function getShorts(numShorts){
 
                 count = shortsDict.push(short)
 
-                if(count >= numShorts){
+                short = {
+                    "title" : "",
+                    "content" : "",
+                    "author" : ""
+                }
+
+                if(count >= _numShorts){
                     return false;
                 }
 
