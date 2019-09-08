@@ -28,7 +28,7 @@ var _topics = {
     "technology" : "technology",
     "startup" : "startup",
     "entertainment" : "entertainment",
-    "miscellaneous" : "miscellaneous",
+    "misc" : "miscellaneous",
     "hatke" : "hatke",
     "science" : "science",
     "automobile" : "automobile"
@@ -39,12 +39,15 @@ var _numShorts = 0
 function lookIn(str , num){
 
     try{
+        str = str.toLowerCase()
         _mainUrl = _baseUrl + "/" + _topics[str]
         _numShorts = num
     }
-    catch(err){
-        console.log("Error at lookIn: ", err)
+    catch{
+        throw new Error("Invalid Category. Available categoris include : national, business, world, politics, technology, startup,\nentertainment, misc, hatke, science, automobile")
+
     }
+
     
 }
 

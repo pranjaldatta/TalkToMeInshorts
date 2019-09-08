@@ -3,3 +3,5 @@ server/scrapper/trialscrapper.js
 server/assets/AWSPollyCred.csv
 server/assets/keys.js
 server/assets/PollyKeys.json
+server/assets/keys.js
+test_audio/*.mp3
